@@ -151,6 +151,28 @@ compose multiple steps).
 
 ## Design decisions
 
+### Why Lisp
+
+S-expression syntax was chosen for four concrete reasons.
+
+- **Homoiconicity.** Code and data share the same representation. This makes
+  macros, code generation, and metaprogramming natural extensions of the
+  language rather than bolted-on mechanisms.
+
+- **No ambiguity by construction.** S-expressions are fully parenthesised.
+  There is no grammar ambiguity to resolve, no shift/reduce conflicts to
+  suppress, and no need for precedence or associativity declarations. The
+  grammar has five rules and generates a conflict-free LALR(1) automaton
+  without any tuning.
+
+- **No operator precedence.** `(+ 1 (* 2 3))` is explicit about evaluation
+  order. There is nothing to memorise and nothing to get wrong.
+
+- **The AST is the source.** Because the written form and the parsed form are
+  structurally identical, a pretty-printer, a source formatter, or a
+  code-generating tool is trivial to write -- just serialise the AST back to
+  s-expressions.
+
 ### Grammar notation: POSIX Yacc
 
 The grammar is written in strict POSIX Yacc format (IEEE Std 1003.1). This is a
