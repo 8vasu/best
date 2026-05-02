@@ -1,6 +1,6 @@
 %{
 /*
-* Best - A statically typed Lisp, implemented with POSIX lex/yacc and Rust.
+* Best - A statically typed Lisp, implemented in POSIX {lex(1), yacc(1)} and Rust.
 * Copyright (C) 2026 Soumendra Ganguly
 * 
 * This program is free software: you can redistribute it and/or modify
