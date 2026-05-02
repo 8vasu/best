@@ -1,0 +1,11 @@
+[package]
+name = "best"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "best"
+path = "src/main.rs"
+
+[build-dependencies]
+cc = "1"

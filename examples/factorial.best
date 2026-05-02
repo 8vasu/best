@@ -1,0 +1,9 @@
+; Recursive factorial
+
+(declare factorial (int) int)
+(defun factorial (n)
+  (if (== n 0)
+    1
+    (* n (factorial (- n 1)))))
+
+(print (factorial 10))

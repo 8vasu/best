@@ -1,0 +1,7 @@
+; String operations
+
+(let greeting str "Hello")
+(let name str "World")
+(let message str (concat greeting (concat ", " name)))
+(print message)
+(print (length message))
